@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState, useEffect} from 'react'
+import Chat from './components/Chat'
+import Input from './components/Input'
 
-function App() {
+const App=()=> {
+
+  const [chatHistory, setChatHistory] = useState([])
+  const [chatMsg, setChatMsg] = useState('')
+
+  console.log(chatMsg)
+
+  const handleSubmit = (e)=> {
+    e.preventDefault()
+    setChatHistory(prevState => [...chatHistory, chatMsg])
+    setChatMsg('')
+  }
+
+  useEffect(()=> {
+
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Chat chatHistory={chatHistory} />
+      <Input setChatMsg={setChatMsg} handleSubmit={handleSubmit}  />
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
