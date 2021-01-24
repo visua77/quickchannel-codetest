@@ -144,8 +144,23 @@ p {
     line-height: 2rem;
     font-size: 2.5rem;
   }
+
+  .header-nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    width:100%;
+    height:100px;
+    background-color: rgb(89, 173, 92);
+    background: #56ab2f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+  } 
   .main{
-    height:80vh;
+    height:70vh;
   }
 
   .user-nav {
