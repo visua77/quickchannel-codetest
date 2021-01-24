@@ -4,7 +4,7 @@ const Chat = ({chatHistory,users,user})=> {
 
     return(
         <>
-        {user !== undefined ? <span className="display-user">{user}:</span>:null}
+        {user !== undefined ? <span className="display-user">{user}:</span>:<span className="display-user">Please select user...</span>}
         <div className="chat-card">
             <div className="container">
                 {user !== undefined  ? chatHistory.map(msg=> (
