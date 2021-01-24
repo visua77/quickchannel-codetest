@@ -124,3 +124,12 @@ p {
   color: silver;
   display: inline-block;
 }
+
+.display-user {
+  display: inline-block;
+  width:300px;
+  padding:.6rem;
+  color:rgb(89, 173, 92);
+  font-size: 1.5rem;
+
+}

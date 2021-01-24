@@ -6,7 +6,7 @@ import Header from './components/Header'
 const App=()=> {
 
   const [users, setUsers] = useState(['You','Guest'])
-  const [user, setUser] = useState()
+  const [user, setUser] = useState(undefined)
   const [chatHistory, setChatHistory] = useState([{
     userName:undefined, 
     msg: undefined
@@ -18,7 +18,7 @@ const App=()=> {
 
   const handleSubmit = (e)=> {
     e.preventDefault()
-    if(chatMsg!=='')setChatHistory(prevState => [...chatHistory, {
+    if(chatMsg!=='' && user!==undefined)setChatHistory(prevState => [...chatHistory, {
       userName: user, 
       msg: chatMsg
     }])
