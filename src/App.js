@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import Chat from './components/Chat'
-import Input from './components/Input'
+import InputMsg from './components/InputMsg'
 
 const App=()=> {
 
@@ -11,7 +11,7 @@ const App=()=> {
 
   const handleSubmit = (e)=> {
     e.preventDefault()
-    setChatHistory(prevState => [...chatHistory, chatMsg])
+    if(chatMsg!=='')setChatHistory(prevState => [...chatHistory, chatMsg])
     setChatMsg('')
   }
 
@@ -22,7 +22,7 @@ const App=()=> {
   return (
     <div className="main">
       <Chat chatHistory={chatHistory} />
-      <Input setChatMsg={setChatMsg} handleSubmit={handleSubmit}  />
+      <InputMsg setChatMsg={setChatMsg} handleSubmit={handleSubmit}  />
       
     </div>
   )
