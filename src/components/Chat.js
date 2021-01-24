@@ -7,7 +7,7 @@ const Chat = ({chatHistory})=> {
             <div className="container">
                 {chatHistory.length ? chatHistory.map(msg=> (
                     <p key={Math.random()}className="msg-item">{msg}</p>
-                )):null}
+                )):<p>Type something to start the chat😀</p>}
             </div>
         </div>
     )

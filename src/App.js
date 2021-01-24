@@ -13,6 +13,7 @@ const App=()=> {
     e.preventDefault()
     if(chatMsg!=='')setChatHistory(prevState => [...chatHistory, chatMsg])
     setChatMsg('')
+    console.log('chatmsg',chatMsg)
   }
 
   useEffect(()=> {
