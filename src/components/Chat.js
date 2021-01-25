@@ -16,7 +16,7 @@ const Chat = ({chatHistory,users,user})=> {
                         <p className={msg.userName.includes('You') ?"msg-item":"msg-item-user"}>{msg.msg }</p>:null
                         }
                     </div>
-                )):<p>Type something to start the chat😀</p>}
+                )):<p>Choose a user top-right, and start the chat😀</p>}
             </div>
         </div>
         </>
