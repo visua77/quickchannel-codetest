@@ -13,7 +13,7 @@ const App=()=> {
   }])
   const [chatMsg, setChatMsg] = useState('')
   const [submit, setSubmit] = useState(false)
-
+  
   useEffect(()=> {
     
     if(chatMsg!=='' && user!==undefined)setChatHistory(prevState => [...chatHistory, {
@@ -23,12 +23,12 @@ const App=()=> {
     setChatMsg('')
     setSubmit(false)
 
-  },[submit])
+  },[submit,chatHistory])
 
   return (
     <><Header users={users} user={user} setUser={setUser} />
       <div className="main">
-      <Chat chatHistory={chatHistory} users={users} user={user} />
+      <Chat chatHistory={chatHistory} setChatHistory={setChatHistory} users={users} user={user} />
       <InputMsg setChatMsg={setChatMsg} setSubmit={setSubmit} chatMsg={chatMsg}  />
       </div>
     </>

@@ -69,6 +69,10 @@ p {
   color:darkgray;
 }
 
+span {
+  display: inline-block;
+}
+
 .header-nav {
   display:flex;
   justify-content: space-between;
@@ -135,11 +139,15 @@ p {
 }
 
 .container {
+  padding:.4rem;
   height:390px;
   overflow: auto;
 }
 
 .msg-item {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
   margin:.5rem;
   font-size: 1.3rem;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
@@ -149,6 +157,9 @@ p {
 }
 
 .msg-item-user {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
   margin:.5rem;
   font-size: 1.3rem;
   text-align: right;
@@ -177,6 +188,10 @@ p {
 .strong {
   font-size: 1.2rem;
   font-weight: bold;
+}
+.delete-msg {
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 @media(max-width:375px){
