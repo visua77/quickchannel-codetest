@@ -123,6 +123,16 @@ p {
   border-radius: 15px;
 }
 
+.msg-item-user {
+  margin:.5rem;
+  font-size: 1.3rem;
+  text-align: right;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+  color:rgb(89, 173, 92);
+  padding:.6rem;
+  border-radius: 15px;
+}
+
 .user {
   font-size: 1rem;
   color: silver;

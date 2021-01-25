@@ -12,30 +12,29 @@ const App=()=> {
     msg: undefined
   }])
   const [chatMsg, setChatMsg] = useState('')
+  const [submit, setSubmit] = useState(false)
 
   console.log('msg',chatMsg)
   console.log('usr',user)
 
-  const handleSubmit = (e)=> {
-    e.preventDefault()
+  useEffect(()=> {
+    
     if(chatMsg!=='' && user!==undefined)setChatHistory(prevState => [...chatHistory, {
       userName: user, 
       msg: chatMsg
     }])
     setChatMsg('')
-    console.log('chatmsg',chatMsg)
-  }
+    console.log('array', chatHistory)
+    setSubmit(false)
 
-  useEffect(()=> {
-
-  },[])
+  },[submit])
 
   return (
     <><Header users={users} setUser={setUser} />
-    <div className="main">
+      <div className="main">
       <Chat chatHistory={chatHistory} users={users} user={user} />
-      <InputMsg setChatMsg={setChatMsg} handleSubmit={handleSubmit}  />
-    </div>
+      <InputMsg setChatMsg={setChatMsg} setSubmit={setSubmit} chatMsg={chatMsg}  />
+      </div>
     </>
   )
 }
