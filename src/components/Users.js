@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Users = ({users,setUser})=> {
+const Users = ({users,user,setUser})=> {
     return(
         <nav>
-        {users.map(usr=>(<span key={usr} className="user-nav"onClick={()=> setUser(usr)}>{usr}</span>))}
+        {users.map(usr=>(<span key={usr} className={usr.includes(user) ? "user-nav-active":"user-nav"}
+        onClick={()=> setUser(usr)}>{usr}</span>))}
         </nav>
     )
 }

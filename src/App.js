@@ -30,7 +30,7 @@ const App=()=> {
   },[submit])
 
   return (
-    <><Header users={users} setUser={setUser} />
+    <><Header users={users} user={user} setUser={setUser} />
       <div className="main">
       <Chat chatHistory={chatHistory} users={users} user={user} />
       <InputMsg setChatMsg={setChatMsg} setSubmit={setSubmit} chatMsg={chatMsg}  />
