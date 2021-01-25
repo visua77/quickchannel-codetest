@@ -7,7 +7,7 @@ const Chat = ({chatHistory,users,user})=> {
         {user !== undefined ? <span className="display-user">{user}:</span>:<span className="display-user">Please select user...</span>}
         <div className="chat-card">
             <div className="container">
-            {user !== undefined ?<span className="user">User '{user}'' is typing...</span>:null}
+            {user !== undefined ?<span className="user">User '{user}'' is selected👍</span>:null}
                 {user !== undefined  ? chatHistory.filter(itm => itm.msg !== '').map(msg=> (
                     <div key={Math.random()}>
                         {msg.userName!==undefined ? 

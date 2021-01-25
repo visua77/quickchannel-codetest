@@ -14,9 +14,6 @@ const App=()=> {
   const [chatMsg, setChatMsg] = useState('')
   const [submit, setSubmit] = useState(false)
 
-  console.log('msg',chatMsg)
-  console.log('usr',user)
-
   useEffect(()=> {
     
     if(chatMsg!=='' && user!==undefined)setChatHistory(prevState => [...chatHistory, {
@@ -24,7 +21,6 @@ const App=()=> {
       msg: chatMsg
     }])
     setChatMsg('')
-    console.log('array', chatHistory)
     setSubmit(false)
 
   },[submit])

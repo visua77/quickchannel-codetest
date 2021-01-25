@@ -2,7 +2,6 @@ import React from 'react'
 import Users from './Users'
 
 const Header = ({users,user,setUser})=>{
-    console.log(user)
     return(
         <div className="header-nav">
             <h1>Chat app</h1>
