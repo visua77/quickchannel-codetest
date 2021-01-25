@@ -222,10 +222,38 @@ span {
     height:70vh;
   }
 
+  .strong {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
   .user-nav {
-    font-size: 1.1rem;
-    margin:.5rem;
+    display:flex;
+    font-size: 1rem;
+    margin:0;
+    padding:.3rem;
     color:white;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .user-nav-active {
+    display:flex;
+    font-size: 1rem;
+    margin:0;
+    color:white;
+    background-color: rgba(0, 0, 0, .2);
+    padding:.3rem;
+    border-radius: 8px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .user-nav:hover {
+    font-size: 1rem;
+    margin:0;
+    color:black;
+    padding:.3rem;
     font-weight: 400;
     cursor: pointer;
   }
