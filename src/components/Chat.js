@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Chat = ({chatHistory,setChatHistory,users,user})=> {
+const Chat = ({chatHistory,setChatHistory,description,user})=> {
 
     const deleteMsg = (index)=> {
         const newArray = chatHistory
@@ -23,7 +23,7 @@ const Chat = ({chatHistory,setChatHistory,users,user})=> {
                         }>X</span></p>:null
                         }
                     </div>
-                )):<p>Choose a user top-right, and start the chat😀</p>}
+                )):<p className="description">{description}</p>}
             </div>
         </div>
         </>

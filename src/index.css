@@ -194,6 +194,10 @@ span {
   cursor: pointer;
 }
 
+.description {
+  color:rgb(218, 127, 127);
+}
+
 @media(max-width:375px){
   h1{
     line-height: 2rem;
